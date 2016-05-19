@@ -11,8 +11,7 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "*",
-        "bower-asset/x-editable": "1.5.1"
+        "yiisoft/yii2": "*"
     },
     "extra": {
         "asset-installer-paths": {

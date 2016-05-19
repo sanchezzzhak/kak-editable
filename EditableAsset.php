@@ -5,17 +5,15 @@ use yii\web\AssetBundle;
 
 class EditableAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/x-editable/dist/bootstrap3-editable';
-    public $depends = [
-        'yii\web\JqueryAsset'
-    ];
+    public $sourcePath = '@vendor/kak/editable/assets';
 
     public $js = [
-        'js/bootstrap-editable.min.js',
+        'js/kak-editable.js'
     ];
 
-    public $css = [
-        'css/bootstrap-editable.css',
+    public $depends = [
+        'yii\bootstrap\BootstrapPluginAsset',
     ];
+
 
 }
