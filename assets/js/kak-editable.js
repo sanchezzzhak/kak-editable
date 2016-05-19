@@ -1,4 +1,4 @@
-$(function(){
+(function ($) {
     "use strict";
 
     var Editable = function (element, options) {
