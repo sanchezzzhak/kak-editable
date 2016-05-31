@@ -1,0 +1,22 @@
+.kak-editable {
+  position: relative;
+
+  .close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+  }
+  .kak-editable-click {
+
+  }
+  .kak-editable-content {
+
+  }
+  .kak-editable-popover {
+      display: inline-block;
+
+  }
+
+}

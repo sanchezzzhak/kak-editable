@@ -1,0 +1,12 @@
+.kak-editable {
+  position: relative; }
+  .kak-editable .close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0; }
+  .kak-editable .kak-editable-popover {
+    display: inline-block; }
+
+/*# sourceMappingURL=kak-editable.css.map */

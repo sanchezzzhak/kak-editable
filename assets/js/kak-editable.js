@@ -9,17 +9,42 @@
         self.create();
     };
 
+    /**
+     * @type {{constructor: Function, init: Function, destroy: Function, create: Function}}
+     */
     Editable.prototype = {
         constructor: Editable,
+        /**
+         * @param options
+         */
         init: function (options) {
             var self = this, $el = self.element;
+            self.$close = $el.find('.close');
+            self.$click  = $el.find('.kak-editable-click');
+            self.$popover  = $el.find('.kak-editable-popover');
+
+            $.each(options, function (key, value) {
+                self[key] = value;
+            });
+
+            $el.triggerHandler('init',this);
         },
         destroy : function(){
             var self = this, $el = self.element;
+            $el.triggerHandler('destroy',this);
         },
         create: function(){
             var self = this, $el = self.element;
-        }
+            var delay = 'fast';
+
+            self.$click.on('click',function(e){
+                self.$popover.fadeIn(delay);
+            });
+            $el.triggerHandler('create',this);
+
+        },
+
+
     };
 
     $.fn.editable = function (option) {
@@ -36,7 +61,9 @@
             }
         });
     };
-
+    $.fn.editable.defaults = {
+        valueIfNull: '<em>(not set)</em>',
+    };
     $.fn.editable.Constructor = Editable;
 
 })(window.jQuery);

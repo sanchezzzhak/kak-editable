@@ -11,9 +11,15 @@ class EditableAsset extends AssetBundle
         'js/kak-editable.js'
     ];
 
+    public $css = [
+        'css/kak-editable.css'
+    ];
+
+
     public $depends = [
         'yii\bootstrap\BootstrapPluginAsset',
     ];
+
 
 
 }
